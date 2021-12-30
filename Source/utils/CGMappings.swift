@@ -160,6 +160,13 @@ public extension Node {
 
 }
 
+public extension Node {
+
+    var viewBoxRect: CGRect? {
+        return ((self as? SVGCanvas)?.layout as? SVGNodeLayout)?.viewBox?.toCG()
+    }
+}
+
 extension MBezierPath {
 
     public func toMacaw() -> Path {
